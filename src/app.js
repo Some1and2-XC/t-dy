@@ -1,9 +1,16 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-const app = () => {
+import Home from "./views/home";
+
+const App = () => {
     return (
-        <p>Hello Wrld!</p>
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Home />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
-export default app;
+export default App;
